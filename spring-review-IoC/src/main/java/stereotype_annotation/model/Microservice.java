@@ -1,0 +1,11 @@
+package stereotype_annotation.model;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Microservice{
+
+    public static void getTotalHours() {
+        System.out.println("Total Hours Microservice: " + 20);
+    }
+}
