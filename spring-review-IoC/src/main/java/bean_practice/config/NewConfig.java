@@ -15,4 +15,10 @@ public class NewConfig {
     String str2(){
         return "str2 printed";
     }
+
+    @Bean
+    @Primary
+    String primary(){
+        return "Primary bean";
+    }
 }
