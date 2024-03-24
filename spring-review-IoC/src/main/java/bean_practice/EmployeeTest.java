@@ -23,8 +23,10 @@ public class EmployeeTest {
         ApplicationContext str = new AnnotationConfigApplicationContext(NewConfig.class);
         String str1 = str.getBean("str1",String.class);
         String str2 = str.getBean("str2",String.class);
+        String primary = str.getBean(String.class);
 
         System.out.println(str1);
         System.out.println(str2);
+        System.out.println(primary);
     }
 }

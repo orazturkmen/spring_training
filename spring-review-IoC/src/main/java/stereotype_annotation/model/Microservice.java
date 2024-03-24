@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Microservice{
 
-    public static void getTotalHours() {
+    public void getTotalHours() {
         System.out.println("Total Hours Microservice: " + 20);
     }
 }
