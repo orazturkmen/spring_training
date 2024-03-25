@@ -15,12 +15,12 @@ public class CommentApp {
         comment.setAuthor("Oraz");
         comment.setText("Spring Framework");
 
-        ApplicationContext container = new AnnotationConfigApplicationContext(Config.class);
+        /*ApplicationContext container = new AnnotationConfigApplicationContext(Config.class);
         CommentNotificationProxy commentNotificationProxy = container.getBean(CommentNotificationProxy.class);
         CommentRepository commentRepository = container.getBean(CommentRepository.class);
 
         commentNotificationProxy.sendComment(comment);
-        commentRepository.storeComment(comment);
+        commentRepository.storeComment(comment);*/
         System.out.println("*************************************************");
 
         ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
