@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:width="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Person Data</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${persons.get(0).getFirstname()}" align="center"></td>
+        <td th:text="${persons.get(0).getLastName()}" align="center"></td>
+        <td th:text="${persons.get(0).getAge()}" align="center"></td>
+        <td th:text="${persons.get(0).getGender()}" align="center"></td>
+    </tr>
+    <tr>
+        <td th:text="${persons.get(1).getFirstname()}" align="center"></td>
+        <td th:text="${persons.get(1).getLastName()}" align="center"></td>
+        <td th:text="${persons.get(1).getAge()}" align="center"></td>
+        <td th:text="${persons.get(1).getGender()}" align="center"></td>
+    </tr>
+    <tr>
+        <td th:text="${persons.get(2).getFirstname()}" align="center"></td>
+        <td th:text="${persons.get(2).getLastName()}" align="center"></td>
+        <td th:text="${persons.get(2).getAge()}" align="center"></td>
+        <td th:text="${persons.get(2).getGender()}" align="center"></td>
+    </tr><tr>
+        <td th:text="${persons.get(3).getFirstname()}" align="center"></td>
+        <td th:text="${persons.get(3).getLastName()}" align="center"></td>
+        <td th:text="${persons.get(3).getAge()}" align="center"></td>
+        <td th:text="${persons.get(3).getGender()}" align="center"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
