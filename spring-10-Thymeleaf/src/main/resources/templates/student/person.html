@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Country</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="person:${persons}">
+        <td  th:text="${person.firstName}" align="center"></td>
+        <td  th:text="${person.lastName}" align="center"></td>
+        <td  th:text="${person.age}" align="center"></td>
+        <td  th:text="${person.country}" align="center"></td>
+
+    </tr>
+    </tbody>
+</table>
+
+<h3>************************************************************************</h3>
+
+<h2 th:text="${persons.get(0).firstName}"></h2>
+<h2 th:text="${persons.get(0).lastName}"></h2>
+<h2 th:text="${persons.get(0).age}"></h2>
+<h2 th:text="${persons.get(0).country}"></h2>
+
+<h3>************************************************************************</h3>
+
+<h3 th:text="${'I am ' + persons.get(1).firstName + ' ' + persons.get(1).lastName}"></h3>
+<h3 th:text="${'I am ' + persons.get(1).age + ' years old and I am from ' + persons.get(1).country}"></h3>
+</body>
+</html>

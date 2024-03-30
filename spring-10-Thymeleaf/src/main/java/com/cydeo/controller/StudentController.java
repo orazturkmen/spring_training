@@ -18,11 +18,11 @@ public class StudentController {
     }
 
     @RequestMapping("/welcome")
-    public String welcome(@RequestParam String firstName, @RequestParam String lastName, @RequestParam int age, @RequestParam String state){
-        System.out.println(firstName);
-        System.out.println(lastName);
-        System.out.println(age);
-        System.out.println(state);
+    public String welcome(@RequestParam String name){
+        System.out.println(name);
+
         return "student/welcome";
     }
+
+
 }
