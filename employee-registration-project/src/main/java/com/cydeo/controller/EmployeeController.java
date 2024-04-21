@@ -3,6 +3,7 @@ package com.cydeo.controller;
 import com.cydeo.bootstrap.DataGenerator;
 import com.cydeo.model.Employee;
 import com.cydeo.service.EmployeeService;
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +31,12 @@ public class EmployeeController {
     @PostMapping("/insert")
     public String insertEmployee(@ModelAttribute("employee")  Employee employee, Model model ){
         employeeService.saveEmployee(employee);
+        return "redirect:list";
+    }
+
+    @GetMapping("/list")
+    public String listEmployee(Model model){
+        model.addAttribute("employeeList", employeeService.readAllEmployee());
         return "employee/employee-list";
     }
 }
