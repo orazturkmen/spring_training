@@ -92,5 +92,9 @@
     <span th:unless="${students.get(0).getState()=='Arizona'}">No Arizona</span>
 </div>
 
+
+<div th:text="${students.get(0).age > 25 ? 'Eligible' : 'Not Eligible'}"></div>
+
+
 </body>
 </html>
