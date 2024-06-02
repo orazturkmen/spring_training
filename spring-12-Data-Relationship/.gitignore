@@ -31,9 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-/spring-13-Data-CinemaLab/.mvn/
-/spring-13-Data-CinemaLab/mvnw
-/spring-13-Data-CinemaLab/mvnw.cmd
-/spring-12-Data-Relationship/.mvn/
-/spring-12-Data-Relationship/mvnw
-/spring-12-Data-Relationship/mvnw.cmd
