@@ -50,5 +50,7 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findBySalaryBetween" + employeeRepository.findBySalaryBetween(58000,60000));
         //System.out.println("" + employeeRepository.findTopBySalaryGreaterThan(1));
         System.out.println("findByEmailEquals" + employeeRepository.findByEmailEquals(null));
+        System.out.println("retrieveEmployeeDetail" + employeeRepository.retrieveEmployeeDetail());
+        System.out.println("retrieveEmployeeSalary= $" + employeeRepository.retrieveEmployeeSalary());
     }
 }
