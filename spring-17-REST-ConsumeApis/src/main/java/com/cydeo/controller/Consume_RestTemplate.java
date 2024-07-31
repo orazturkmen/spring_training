@@ -1,12 +1,14 @@
 package com.cydeo.controller;
 
 import com.cydeo.dto.User;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Arrays;
 
 @RestController
 @RequestMapping("cydeo")
@@ -29,5 +31,16 @@ public class Consume_RestTemplate {
     public Object readUser(@PathVariable("id") Long id){
         String URL = URI + "/{id}";
         return restTemplate.getForObject(URL, Object.class,id);
+    }
+
+    @GetMapping("test")
+    public ResponseEntity<Object> consumePostFromDummyApi(){
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        headers.set("app-id", "cccc");
+        HttpEntity<String> entity = new HttpEntity<>(headers);
+
+        return restTemplate.exchange("fdfdf", HttpMethod.GET,entity,Object.class);
     }
 }
