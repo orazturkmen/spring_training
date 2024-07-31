@@ -27,5 +27,10 @@ public class CourseController {
         return courseService.getCourseById(id);
     }
 
+    @GetMapping("category/{name}")
+    public List<CourseDTO> getCourseByCategory(@PathVariable("name") String category){
+
+        return courseService.getCoursesByCategory(category);
+    }
 
 }
