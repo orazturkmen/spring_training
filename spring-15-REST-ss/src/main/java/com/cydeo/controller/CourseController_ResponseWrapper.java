@@ -34,4 +34,11 @@ public class CourseController_ResponseWrapper {
         return ResponseEntity.ok(new ResponseWrapper("courseId: " + id + " retrieved", courseService.getCourseById(id)));
 
     }
+
+    @GetMapping("{id}")
+    public ResponseEntity<Void> deleteCourseById(@PathVariable Long id){
+
+        courseService.deleteCourseById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
