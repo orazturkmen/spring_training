@@ -32,6 +32,19 @@ public class CourseController_ResponseEntity {
                 .body(courseService.getCourses());
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<CourseDTO> getCourseById(@PathVariable Long id){
+
+        return ResponseEntity
+                .ok(courseService.getCourseById(id));
+    }
+
+    @GetMapping("category/{name}")
+    public ResponseEntity<List<CourseDTO>> getCourseByCategory(@PathVariable("name") String category){
+
+        return ResponseEntity
+                .ok(courseService.getCoursesByCategory(category));
+    }
 
 
 }
